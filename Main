@@ -1,1 +1,19 @@
-loadstring(game:HttpGet("https://api.rubis.app/v2/scrap/bjNpOByMh20XJqWh/raw",true))()
+//What are you looking for
+
+loadstring(game:HttpGet("https://api.rubis.app/v2/scrap/DDNRRB7i1DcchTUx/raw",true))()
+
+local scripts = {
+    [142823291] = "loadstring(game:HttpGet("https://raw.githubusercontent.com/xv3gasx/Murder-Mystery-2/refs/heads/main/Release.lua"))()", //MM2
+    [8737899170] = "loadstring(game:HttpGet("https://raw.githubusercontent.com/domenicohvh/ZapHub/refs/heads/main/ZapHubPS99.lua"))()",
+    [10539706691] = "https://raw.githubusercontent.com/zReal-King/Evade/main/Main.lua",
+    [10324347967] = "https://raw.githubusercontent.com/zReal-King/Evade/main/Main.lua",
+    [10662542523] = "https://raw.githubusercontent.com/zReal-King/Evade/main/Main.lua",
+    [10324346056] = "https://raw.githubusercontent.com/zReal-King/Evade/main/Main.lua",
+}
+
+local id = game.PlaceId
+local url = scripts[id]
+
+if url then
+    local success, err = pcall(function() loadstring(game:HttpGet(url))() end)
+    if not success then warn("Error: " .. err) end
